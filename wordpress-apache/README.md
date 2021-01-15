@@ -2,7 +2,6 @@
 
 [WordPress](https://wordpress.org/) is one of the most versatile open source content management systems on the market. A publishing platform for building blogs and websites.
 
-## TL;DR
 
 ```console
 $ helm repo add center https://repo.chartcenter.io
@@ -557,41 +556,4 @@ $ kubectl logs $(kubectl get pods -l app.kubernetes.io/instance=wordpress,app.ku
 mariadb 12:13:24.98 INFO  ==> Using persisted data
 mariadb 12:13:25.01 INFO  ==> Running mysql_upgrade
 ...
-```
-
-#### Useful links
-
-- https://docs.bitnami.com/tutorials/resolve-helm2-helm3-post-migration-issues/
-- https://helm.sh/docs/topics/v2_v3_migration/
-- https://helm.sh/blog/migrate-from-helm-v2-to-helm-v3/
-
-### To 9.0.0
-
-The [Bitnami WordPress](https://github.com/bitnami/bitnami-docker-wordpress) image was migrated to a "non-root" user approach. Previously the container ran as the `root` user and the Apache daemon was started as the `daemon` user. From now on, both the container and the Apache daemon run as user `1001`. You can revert this behavior by setting the parameters `securityContext.runAsUser`, and `securityContext.fsGroup` to `0`.
-Chart labels and Ingress configuration were also adapted to follow the Helm charts best practices.
-
-Consequences:
-
-- The HTTP/HTTPS ports exposed by the container are now `8080/8443` instead of `80/443`.
-- No writing permissions will be granted on `wp-config.php` by default.
-- Backwards compatibility is not guaranteed.
-
-To upgrade to `9.0.0`, it's recommended to install a new WordPress chart, and migrate your WordPress site using backup/restore tools such as [VaultPress](https://vaultpress.com/) or [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/).
-
-### To 8.0.0
-
-Helm performs a lookup for the object based on its group (apps), version (v1), and kind (Deployment). Also known as its GroupVersionKind, or GVK. Changing the GVK is considered a compatibility breaker from Kubernetes' point of view, so you cannot "upgrade" those objects to the new GVK in-place. Earlier versions of Helm 3 did not perform the lookup correctly which has since been fixed to match the spec.
-
-In https://github.com/helm/charts/pulls/12642 the `apiVersion` of the deployment resources was updated to `apps/v1` in tune with the api's deprecated, resulting in compatibility breakage.
-
-This major version signifies this change.
-
-### To 3.0.0
-
-Backwards compatibility is not guaranteed unless you modify the labels used on the chart's deployments.
-Use the workaround below to upgrade from versions previous to `3.0.0`. The following example assumes that the release name is `wordpress`:
-
-```console
-kubectl patch deployment wordpress-wordpress --type=json -p='[{"op": "remove", "path": "/spec/selector/matchLabels/chart"}]'
-kubectl delete statefulset wordpress-mariadb --cascade=false
 ```
