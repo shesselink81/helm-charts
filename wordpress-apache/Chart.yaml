@@ -17,7 +17,7 @@ engine: gotpl
 name: wordpress-apache
 home: https://github.com/shesselink81/helm-charts/tree/main/wordpress-apache
 icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
-version: 0.0.9
+version: 0.0.10
 maintainers:
   - email: sander@hesselink.me
     name: shesselink81
