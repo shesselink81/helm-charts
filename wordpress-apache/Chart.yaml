@@ -15,6 +15,7 @@ dependencies:
 description: Web publishing platform for building blogs and websites.
 engine: gotpl
 name: wordpress-apache
+type: application
 home: https://github.com/shesselink81/helm-charts/tree/main/wordpress-apache
 icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
 version: 0.0.10
