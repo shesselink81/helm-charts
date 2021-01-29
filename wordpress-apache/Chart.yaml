@@ -18,7 +18,7 @@ name: wordpress-apache
 type: application
 home: https://chartcenter.io/gh-shesselink81/wordpress-apache
 icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
-version: 0.0.11
+version: 0.0.12
 maintainers:
   - email: sander@hesselink.me
     name: shesselink81

@@ -136,7 +136,7 @@ htaccessPersistenceEnabled: true
 
 ## ConfigMap with custom wordpress-htaccess.conf file (requires allowOverrideNone to true)
 ##
-customHTAccessCM:
+customHTAccessCM: custom-htaccess
 
 ## Command and args for running the container (set to default if not set). Use array form
 ##
