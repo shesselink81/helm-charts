@@ -12,7 +12,7 @@
 ## ref: https://hub.docker.com/r/bitnami/wordpress/tags/
 ##
 image:
-  registry: docker.io
+  registry: quay.io
   repository: shesselink81/wordpress-apache
   tag: v5.6.0.5
   ## Specify a imagePullPolicy
