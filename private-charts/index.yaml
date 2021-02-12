@@ -1,0 +1,45 @@
+apiVersion: v1
+entries:
+  annamaniacs:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-02-12T23:26:42.4119733+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 3cda15ed501c9f899f78b251fffccfe6cd822417cb3d045ab8933f7dcdf978ee
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: annamaniacs
+    type: application
+    urls:
+    - annamaniacs-0.1.0.tgz
+    version: 0.1.0
+  hesselinkme:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-02-12T23:26:42.4129734+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 55b7a3be94815e4fc2712a1aa08e8a7e6070e05d8f3c1e65af310f1c53c07508
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: hesselinkme
+    type: application
+    urls:
+    - hesselinkme-0.1.0.tgz
+    version: 0.1.0
+  sanderhesselinknl:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-02-12T23:26:42.4139733+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 1fdd171213aaefd006cb7084ee0b180390d5405b8fad66df16cfb40410f57f6d
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: sanderhesselinknl
+    type: application
+    urls:
+    - sanderhesselinknl-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-02-12T23:26:42.4109734+01:00"

@@ -1,53 +1,11 @@
 apiVersion: v1
 entries:
-  annamaniacs:
-  - apiVersion: v2
-    appVersion: 1.0.0
-    created: "2021-02-12T23:10:41.1088793+01:00"
-    description: A Helm chart for Kubernetes
-    digest: d3f6fb597cc58f5a9ba5b7563b807b850417267a4452a6363d80d91de3c7efa0
-    maintainers:
-    - email: sander@hesselink.me
-      name: shesselink81
-    name: annamaniacs
-    type: application
-    urls:
-    - annamaniacs-0.1.0.tgz
-    version: 0.1.0
-  hesselinkme:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-02-12T23:10:41.1098793+01:00"
-    description: A Helm chart for Kubernetes
-    digest: 057a13f3dfea7216f170e033caefb85a901d00dc89625e0cc6477223ca822639
-    maintainers:
-    - email: sander@hesselink.me
-      name: shesselink81
-    name: hesselinkme
-    type: application
-    urls:
-    - hesselinkme-0.1.0.tgz
-    version: 0.1.0
-  sanderhesselinknl:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-02-12T23:10:41.1108791+01:00"
-    description: A Helm chart for Kubernetes
-    digest: fea72e8112c4c184eff6ab6bd3573e60a50767a6258659f041fdf2a36ad51413
-    maintainers:
-    - email: sander@hesselink.me
-      name: shesselink81
-    name: sanderhesselinknl
-    type: application
-    urls:
-    - sanderhesselinknl-0.1.0.tgz
-    version: 0.1.0
   wordpress-apache:
   - annotations:
       category: CMS
     apiVersion: v2
     appVersion: 5.6.0
-    created: "2021-02-12T23:10:41.1698794+01:00"
+    created: "2021-02-12T23:26:41.8273679+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -59,7 +17,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: Web publishing platform for building blogs and websites.
-    digest: 9a0725a09546c685a227a05228554c8f8ea2dc03e0177413b9b70907cdc6d910
+    digest: c605c7d9f04ae4acf29217ce7f639ac9f0959569759aa36807f0d6d5a9c2b33c
     home: https://chartcenter.io/gh-shesselink81/wordpress-apache
     icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
     maintainers:
@@ -74,4 +32,4 @@ entries:
     urls:
     - wordpress-apache-0.0.17.tgz
     version: 0.0.17
-generated: "2021-02-12T23:10:41.1078792+01:00"
+generated: "2021-02-12T23:26:41.7743638+01:00"
