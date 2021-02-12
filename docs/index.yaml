@@ -1,0 +1,77 @@
+apiVersion: v1
+entries:
+  annamaniacs:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-02-12T21:55:53.2069144+01:00"
+    description: A Helm chart for Kubernetes
+    digest: b1773001d3d945f2664cce1400807f462e04e0f3dea52dc26007269fa1ada2df
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: annamaniacs
+    type: application
+    urls:
+    - annamaniacs-0.1.0.tgz
+    version: 0.1.0
+  hesselinkme:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-02-12T21:55:53.208914+01:00"
+    description: A Helm chart for Kubernetes
+    digest: c2e6d55c9801e0da39f44506b8a19809a8db19d8e2607c11e75f7e70b483c893
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: hesselinkme
+    type: application
+    urls:
+    - hesselinkme-0.1.0.tgz
+    version: 0.1.0
+  sanderhesselinknl:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-02-12T21:55:53.210914+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 0ed5aae4e817b8c8a43fd81b936bd6576a117a732d40590b5688e73b56ea1082
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: sanderhesselinknl
+    type: application
+    urls:
+    - sanderhesselinknl-0.1.0.tgz
+    version: 0.1.0
+  wordpress-apache:
+  - annotations:
+      category: CMS
+    apiVersion: v2
+    appVersion: 5.6.0
+    created: "2021-02-12T21:55:53.2839592+01:00"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Web publishing platform for building blogs and websites.
+    digest: 748909e59b0993240bcd4e4adc94be0b812554e86182d87f0cd18af3e15b5a1d
+    home: https://chartcenter.io/gh-shesselink81/wordpress-apache
+    icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: wordpress-apache
+    sources:
+    - https://github.com/shesselink81/helm-charts/tree/main/wordpress-apache
+    - https://github.com/shesselink81/wordpress-apache
+    - http://www.wordpress.com/
+    type: application
+    urls:
+    - wordpress-apache-0.0.17.tgz
+    version: 0.0.17
+generated: "2021-02-12T21:55:53.2029133+01:00"
