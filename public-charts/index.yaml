@@ -5,7 +5,38 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.6.0
-    created: "2021-02-12T23:26:41.8273679+01:00"
+    created: "2021-02-13T00:25:14.0478161+01:00"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Web publishing platform for building blogs and websites.
+    digest: 5eeabfee4deb25c4f4d322ea23aa7c7e80dcf0068cb0d4cb32abe75d791f5391
+    home: https://shesselink81.github.io/helm-charts/public-charts/
+    icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: wordpress-apache
+    sources:
+    - https://github.com/shesselink81/helm-charts/tree/main/wordpress-apache
+    - https://github.com/shesselink81/wordpress-apache
+    - http://www.wordpress.com/
+    type: application
+    urls:
+    - wordpress-apache-0.0.18.tgz
+    version: 0.0.18
+  - annotations:
+      category: CMS
+    apiVersion: v2
+    appVersion: 5.6.0
+    created: "2021-02-13T00:25:14.0398164+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -32,4 +63,4 @@ entries:
     urls:
     - wordpress-apache-0.0.17.tgz
     version: 0.0.17
-generated: "2021-02-12T23:26:41.7743638+01:00"
+generated: "2021-02-13T00:25:13.9868117+01:00"
