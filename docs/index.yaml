@@ -3,9 +3,9 @@ entries:
   annamaniacs:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-02-12T21:55:53.2069144+01:00"
+    created: "2021-02-12T23:10:41.1088793+01:00"
     description: A Helm chart for Kubernetes
-    digest: b1773001d3d945f2664cce1400807f462e04e0f3dea52dc26007269fa1ada2df
+    digest: d3f6fb597cc58f5a9ba5b7563b807b850417267a4452a6363d80d91de3c7efa0
     maintainers:
     - email: sander@hesselink.me
       name: shesselink81
@@ -17,9 +17,9 @@ entries:
   hesselinkme:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-02-12T21:55:53.208914+01:00"
+    created: "2021-02-12T23:10:41.1098793+01:00"
     description: A Helm chart for Kubernetes
-    digest: c2e6d55c9801e0da39f44506b8a19809a8db19d8e2607c11e75f7e70b483c893
+    digest: 057a13f3dfea7216f170e033caefb85a901d00dc89625e0cc6477223ca822639
     maintainers:
     - email: sander@hesselink.me
       name: shesselink81
@@ -31,9 +31,9 @@ entries:
   sanderhesselinknl:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-02-12T21:55:53.210914+01:00"
+    created: "2021-02-12T23:10:41.1108791+01:00"
     description: A Helm chart for Kubernetes
-    digest: 0ed5aae4e817b8c8a43fd81b936bd6576a117a732d40590b5688e73b56ea1082
+    digest: fea72e8112c4c184eff6ab6bd3573e60a50767a6258659f041fdf2a36ad51413
     maintainers:
     - email: sander@hesselink.me
       name: shesselink81
@@ -47,7 +47,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.6.0
-    created: "2021-02-12T21:55:53.2839592+01:00"
+    created: "2021-02-12T23:10:41.1698794+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -59,7 +59,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: Web publishing platform for building blogs and websites.
-    digest: 748909e59b0993240bcd4e4adc94be0b812554e86182d87f0cd18af3e15b5a1d
+    digest: 9a0725a09546c685a227a05228554c8f8ea2dc03e0177413b9b70907cdc6d910
     home: https://chartcenter.io/gh-shesselink81/wordpress-apache
     icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
     maintainers:
@@ -74,4 +74,4 @@ entries:
     urls:
     - wordpress-apache-0.0.17.tgz
     version: 0.0.17
-generated: "2021-02-12T21:55:53.2029133+01:00"
+generated: "2021-02-12T23:10:41.1078792+01:00"
