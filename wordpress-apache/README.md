@@ -4,8 +4,8 @@
 
 
 ```console
-$ helm repo add center https://repo.chartcenter.io
-$ helm install wordpress-apache center/gh-shesselink81/wordpress-apache
+$ helm repo add gh-shesselink81-public https://shesselink81.github.io/helm-charts/public-charts/
+$ helm install wordpress-apache gh-shesselink81-public/wordpress-apache
 ```
 
 ## Introduction
@@ -28,7 +28,7 @@ Bitnami charts can be used with [Kubeapps](https://kubeapps.com/) for deployment
 To install the chart with the release name `my-release`:
 
 ```console
-helm install my-release center/gh-shesselink81/wordpress-apache
+helm install my-release gh-shesselink81-public/wordpress-apache
 ```
 
 The command deploys WordPress on the Kubernetes cluster in the default configuration. The [Parameters](#parameters) section lists the parameters that can be configured during installation.
