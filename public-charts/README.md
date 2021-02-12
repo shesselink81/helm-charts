@@ -1,3 +1,3 @@
 # helm-charts
-Helm Charts shesselink81
-
+Public Helm Charts shesselink81
+helm repo add gh-shesselink81-public https://shesselink81.github.io/helm-charts/public-charts/

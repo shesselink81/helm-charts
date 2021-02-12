@@ -1,8 +1,4 @@
 # helm-charts
-Public Helm Charts shesselink81:
-
-* helm repo add gh-shesselink81-public https://shesselink81.github.io/helm-charts/public-charts/
-
 Private Helm Charts shesselink81:
 
 * helm repo add gh-shesselink81-private https://shesselink81.github.io/helm-charts/private-charts/
