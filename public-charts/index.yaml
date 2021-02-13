@@ -4,8 +4,39 @@ entries:
   - annotations:
       category: CMS
     apiVersion: v2
+    appVersion: 5.6.1
+    created: "2021-02-13T02:42:05.059196+01:00"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Web publishing platform for building blogs and websites.
+    digest: 4207a6082357412a80e91c1b51743b3b397c80e403e39bd01cf5633cd50c0fda
+    home: https://artifacthub.io/packages/helm/gh-shesselink81-public/wordpress-apache
+    icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: wordpress-apache
+    sources:
+    - https://github.com/shesselink81/helm-charts/tree/main/wordpress-apache
+    - https://github.com/shesselink81/wordpress-apache
+    - http://www.wordpress.com/
+    type: application
+    urls:
+    - wordpress-apache-1.0.1.tgz
+    version: 1.0.1
+  - annotations:
+      category: CMS
+    apiVersion: v2
     appVersion: 5.6.0
-    created: "2021-02-13T02:04:06.3276715+01:00"
+    created: "2021-02-13T02:42:05.053196+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -36,7 +67,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.6.0
-    created: "2021-02-13T02:04:06.3206717+01:00"
+    created: "2021-02-13T02:42:05.034196+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -63,4 +94,4 @@ entries:
     urls:
     - wordpress-apache-0.0.17.tgz
     version: 0.0.17
-generated: "2021-02-13T02:04:06.2625982+01:00"
+generated: "2021-02-13T02:42:04.9701941+01:00"
