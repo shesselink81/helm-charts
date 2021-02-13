@@ -12,6 +12,10 @@ dependencies:
     tags:
       - bitnami-common
     version: 1.x.x
+  - condition: ingress.enabled
+    name: ingress-nginx
+    repository: https://kubernetes.github.io/ingress-nginx
+    version: 3.23.x
 description: Web publishing platform for building blogs and websites.
 engine: gotpl
 name: wordpress-apache

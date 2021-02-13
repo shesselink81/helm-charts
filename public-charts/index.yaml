@@ -5,7 +5,42 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.6.1
-    created: "2021-02-13T02:42:05.059196+01:00"
+    created: "2021-02-13T04:20:59.1720241+01:00"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    - condition: ingress.enabled
+      name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: 3.23.x
+    description: Web publishing platform for building blogs and websites.
+    digest: 05dbe396aa13a48dd0ea58c7395a29970b01c970a973a6b5781597cdf12a57e8
+    home: https://artifacthub.io/packages/helm/gh-shesselink81-public/wordpress-apache
+    icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: wordpress-apache
+    sources:
+    - https://github.com/shesselink81/helm-charts/tree/main/wordpress-apache
+    - https://github.com/shesselink81/wordpress-apache
+    - http://www.wordpress.com/
+    type: application
+    urls:
+    - wordpress-apache-1.0.2.tgz
+    version: 1.0.2
+  - annotations:
+      category: CMS
+    apiVersion: v2
+    appVersion: 5.6.1
+    created: "2021-02-13T04:20:59.1620226+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -36,7 +71,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.6.0
-    created: "2021-02-13T02:42:05.053196+01:00"
+    created: "2021-02-13T04:20:59.155024+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -67,7 +102,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.6.0
-    created: "2021-02-13T02:42:05.034196+01:00"
+    created: "2021-02-13T04:20:59.1469419+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -94,4 +129,4 @@ entries:
     urls:
     - wordpress-apache-0.0.17.tgz
     version: 0.0.17
-generated: "2021-02-13T02:42:04.9701941+01:00"
+generated: "2021-02-13T04:20:59.0779425+01:00"
