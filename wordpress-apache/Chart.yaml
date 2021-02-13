@@ -16,13 +16,13 @@ description: Web publishing platform for building blogs and websites.
 engine: gotpl
 name: wordpress-apache
 type: application
-home: https://shesselink81.github.io/helm-charts/public-charts/
+home: https://artifacthub.io/packages/helm/gh-shesselink81-public/wordpress-apache
 sources:
   - https://github.com/shesselink81/helm-charts/tree/main/wordpress-apache
   - https://github.com/shesselink81/wordpress-apache
   - http://www.wordpress.com/
 icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
-version: 0.0.18
+version: 0.0.19
 maintainers:
   - email: sander@hesselink.me
     name: shesselink81
