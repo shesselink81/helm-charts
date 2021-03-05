@@ -5,7 +5,7 @@
 
 ```console
 $ helm repo add gh-shesselink81-public https://shesselink81.github.io/helm-charts/public-charts/
-$ helm install wordpress-apache gh-shesselink81-public/wordpress-apache --set redis.cluster.enabled=false --set redis.cluster.slaveCount=0 --set redis.master.persistence.enabled=false
+$ helm install wordpress-apache gh-shesselink81-public/wordpress-apache --set persistence.enabled=false --set redis.cluster.enabled=false --set redis.cluster.slaveCount=0 --set redis.master.persistence.enabled=false
 ```
 
 ## Introduction
