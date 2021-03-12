@@ -12,9 +12,6 @@ dependencies:
     tags:
       - bitnami-common
     version: 1.x.x
-  - name: redis
-    repository: https://charts.bitnami.com/bitnami
-    version: 12.x.x
 description: Web publishing platform for building blogs and websites.
 engine: gotpl
 name: wordpress-apache
@@ -25,7 +22,11 @@ sources:
   - https://github.com/shesselink81/wordpress-apache
   - http://www.wordpress.com/
 icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+<<<<<<< HEAD
 version: 1.0.7
+=======
+version: 1.0.5
+>>>>>>> parent of 8d06f7a (added dep redis to wordpress chart)
 maintainers:
   - email: sander@hesselink.me
     name: shesselink81

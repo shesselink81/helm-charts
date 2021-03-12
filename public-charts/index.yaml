@@ -4,8 +4,13 @@ entries:
   - annotations:
       category: CMS
     apiVersion: v2
+<<<<<<< HEAD
     appVersion: 5.7.0
     created: "2021-03-12T17:13:24.9605841+01:00"
+=======
+    appVersion: 5.6.2
+    created: "2021-03-05T17:46:21.543644+01:00"
+>>>>>>> parent of 8d06f7a (added dep redis to wordpress chart)
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -16,6 +21,7 @@ entries:
       tags:
       - bitnami-common
       version: 1.x.x
+<<<<<<< HEAD
     - name: redis
       repository: https://charts.bitnami.com/bitnami
       version: 12.x.x
@@ -55,6 +61,10 @@ entries:
       version: 12.x.x
     description: Web publishing platform for building blogs and websites.
     digest: be4678995fc61e3fda1e5cb0517b37d42a63b5b73d43cfdf59386611816cf899
+=======
+    description: Web publishing platform for building blogs and websites.
+    digest: 3cfee529329bb342150733e89dc7cae88c86b2bf399ff4d6eee958de12a3aa5b
+>>>>>>> parent of 8d06f7a (added dep redis to wordpress chart)
     home: https://artifacthub.io/packages/helm/gh-shesselink81-public/wordpress-apache
     icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
     maintainers:
@@ -73,7 +83,73 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.6.2
+<<<<<<< HEAD
     created: "2021-03-12T17:13:24.8918427+01:00"
+=======
+    created: "2021-03-05T17:46:21.5226498+01:00"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Web publishing platform for building blogs and websites.
+    digest: 642b643a0cf9c9be26412e2080cac3f03646539779d530d847a8320932e703f2
+    home: https://artifacthub.io/packages/helm/gh-shesselink81-public/wordpress-apache
+    icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: wordpress-apache
+    sources:
+    - https://github.com/shesselink81/helm-charts/tree/main/wordpress-apache
+    - https://github.com/shesselink81/wordpress-apache
+    - http://www.wordpress.com/
+    type: application
+    urls:
+    - wordpress-apache-1.0.4.tgz
+    version: 1.0.4
+  - annotations:
+      category: CMS
+    apiVersion: v2
+    appVersion: 5.6.1
+    created: "2021-03-05T17:46:21.5033343+01:00"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Web publishing platform for building blogs and websites.
+    digest: 9a34204246ea122f75e0085d74be20e47938ed5077fbcd0902f792a3d1e9a152
+    home: https://artifacthub.io/packages/helm/gh-shesselink81-public/wordpress-apache
+    icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: wordpress-apache
+    sources:
+    - https://github.com/shesselink81/helm-charts/tree/main/wordpress-apache
+    - https://github.com/shesselink81/wordpress-apache
+    - http://www.wordpress.com/
+    type: application
+    urls:
+    - wordpress-apache-1.0.3.tgz
+    version: 1.0.3
+  - annotations:
+      category: CMS
+    apiVersion: v2
+    appVersion: 5.6.1
+    created: "2021-03-05T17:46:21.4859837+01:00"
+>>>>>>> parent of 8d06f7a (added dep redis to wordpress chart)
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -103,8 +179,13 @@ entries:
   - annotations:
       category: CMS
     apiVersion: v2
+<<<<<<< HEAD
     appVersion: 5.6.2
     created: "2021-03-12T17:13:24.8577065+01:00"
+=======
+    appVersion: 5.6.1
+    created: "2021-03-05T17:46:21.4609286+01:00"
+>>>>>>> parent of 8d06f7a (added dep redis to wordpress chart)
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -129,6 +210,74 @@ entries:
     - http://www.wordpress.com/
     type: application
     urls:
+<<<<<<< HEAD
     - wordpress-apache-1.0.4.tgz
     version: 1.0.4
 generated: "2021-03-12T17:13:24.8207873+01:00"
+=======
+    - wordpress-apache-1.0.1.tgz
+    version: 1.0.1
+  - annotations:
+      category: CMS
+    apiVersion: v2
+    appVersion: 5.6.0
+    created: "2021-03-05T17:46:21.4424654+01:00"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Web publishing platform for building blogs and websites.
+    digest: 90baa0eb518b8954de20a3ed0901c5fe48a03ac896a392939874f62f48cd80f7
+    home: https://shesselink81.github.io/helm-charts/public-charts/
+    icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: wordpress-apache
+    sources:
+    - https://github.com/shesselink81/helm-charts/tree/main/wordpress-apache
+    - https://github.com/shesselink81/wordpress-apache
+    - http://www.wordpress.com/
+    type: application
+    urls:
+    - wordpress-apache-0.0.18.tgz
+    version: 0.0.18
+  - annotations:
+      category: CMS
+    apiVersion: v2
+    appVersion: 5.6.0
+    created: "2021-03-05T17:46:21.418277+01:00"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Web publishing platform for building blogs and websites.
+    digest: c605c7d9f04ae4acf29217ce7f639ac9f0959569759aa36807f0d6d5a9c2b33c
+    home: https://chartcenter.io/gh-shesselink81/wordpress-apache
+    icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: wordpress-apache
+    sources:
+    - https://github.com/shesselink81/helm-charts/tree/main/wordpress-apache
+    - https://github.com/shesselink81/wordpress-apache
+    - http://www.wordpress.com/
+    type: application
+    urls:
+    - wordpress-apache-0.0.17.tgz
+    version: 0.0.17
+generated: "2021-03-05T17:46:21.3934109+01:00"
+>>>>>>> parent of 8d06f7a (added dep redis to wordpress chart)
