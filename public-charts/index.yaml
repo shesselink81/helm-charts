@@ -4,8 +4,39 @@ entries:
   - annotations:
       category: CMS
     apiVersion: v2
+    appVersion: 5.7.0
+    created: "2021-03-12T21:52:04.5637146+01:00"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Web publishing platform for building blogs and websites.
+    digest: 0fb0bdf5ff9dd6b6bc9d6ffe3efd5e3babc459779e074183739dc0bdc7447e89
+    home: https://artifacthub.io/packages/helm/gh-shesselink81-public/wordpress-apache
+    icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: wordpress-apache
+    sources:
+    - https://github.com/shesselink81/helm-charts/tree/main/wordpress-apache
+    - https://github.com/shesselink81/wordpress-apache
+    - http://www.wordpress.com/
+    type: application
+    urls:
+    - wordpress-apache-1.0.7.tgz
+    version: 1.0.7
+  - annotations:
+      category: CMS
+    apiVersion: v2
     appVersion: 5.6.2
-    created: "2021-03-12T18:35:30.2962595+01:00"
+    created: "2021-03-12T21:52:04.5394537+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -39,7 +70,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.6.2
-    created: "2021-03-12T18:35:30.2297096+01:00"
+    created: "2021-03-12T21:52:04.5107497+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -70,7 +101,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.6.2
-    created: "2021-03-12T18:35:30.1852648+01:00"
+    created: "2021-03-12T21:52:04.4906097+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -97,4 +128,4 @@ entries:
     urls:
     - wordpress-apache-1.0.4.tgz
     version: 1.0.4
-generated: "2021-03-12T18:35:30.1424973+01:00"
+generated: "2021-03-12T21:52:04.4713842+01:00"
