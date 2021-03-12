@@ -22,11 +22,7 @@ sources:
   - https://github.com/shesselink81/wordpress-apache
   - http://www.wordpress.com/
 icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
-<<<<<<< HEAD
 version: 1.0.6
-=======
-version: 1.0.5
->>>>>>> parent of 8d06f7a (added dep redis to wordpress chart)
 maintainers:
   - email: sander@hesselink.me
     name: shesselink81
