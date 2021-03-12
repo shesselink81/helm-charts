@@ -4,8 +4,42 @@ entries:
   - annotations:
       category: CMS
     apiVersion: v2
+    appVersion: 5.7.0
+    created: "2021-03-12T17:13:24.9605841+01:00"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    - name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    description: Web publishing platform for building blogs and websites.
+    digest: b81ef84d4ac85ed8c4b05467b73c0d8c3682e60ee4c4460f5a10bfc94fd07a3e
+    home: https://artifacthub.io/packages/helm/gh-shesselink81-public/wordpress-apache
+    icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: wordpress-apache
+    sources:
+    - https://github.com/shesselink81/helm-charts/tree/main/wordpress-apache
+    - https://github.com/shesselink81/wordpress-apache
+    - http://www.wordpress.com/
+    type: application
+    urls:
+    - wordpress-apache-1.0.7.tgz
+    version: 1.0.7
+  - annotations:
+      category: CMS
+    apiVersion: v2
     appVersion: 5.6.2
-    created: "2021-03-05T19:46:05.2995754+01:00"
+    created: "2021-03-12T17:13:24.9348721+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -39,7 +73,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.6.2
-    created: "2021-03-05T19:46:05.2676079+01:00"
+    created: "2021-03-12T17:13:24.8918427+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -70,7 +104,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.6.2
-    created: "2021-03-05T19:46:05.2119689+01:00"
+    created: "2021-03-12T17:13:24.8577065+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -97,4 +131,4 @@ entries:
     urls:
     - wordpress-apache-1.0.4.tgz
     version: 1.0.4
-generated: "2021-03-05T19:46:05.1826793+01:00"
+generated: "2021-03-12T17:13:24.8207873+01:00"
