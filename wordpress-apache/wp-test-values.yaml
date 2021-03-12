@@ -1,0 +1,2 @@
+ingress:
+  annotations: {kubernetes.io/ingress.class: nginx,cert-manager.io/cluster-issuer: azure-dns-acme-issuer}
