@@ -609,8 +609,8 @@ redis:
     slaveCount: 0
   master:
     persistence:
-      enabled: false  
-      
+      enabled: false
+  password: ""
 ##
 ## MariaDB chart configuration
 ##

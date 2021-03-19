@@ -14,7 +14,23 @@ helm repo add gh-shesselink81-public https://shesselink81.github.io/helm-charts/
 HOSTNAME=test.example.com
 helm install wordpress-apache gh-shesselink81-public/wordpress-apache --set ingress.hostname=$HOSTNAME -f https://raw.githubusercontent.com/shesselink81/helm-charts/main/wordpress-apache/wp-test-values.yaml
 ```
+## Upgrade Example
+```console
+HOSTNAME=test.example.com
+## Export Passwords
+export WORDPRESS_PASSWORD=$(kubectl get secret --namespace "default" wordpress-apache -o jsonpath="{.data.wordpress-password}" | base64 --decode)
+export MARIADB_ROOT_PASSWORD=$(kubectl get secret --namespace "default" wordpress-apache-mariadb -o jsonpath="{.data.mariadb-root-password}" | base64 --decode)
+export MARIADB_PASSWORD=$(kubectl get secret --namespace "default" wordpress-apache-mariadb -o jsonpath="{.data.mariadb-password}" | base64 --decode)
+export REDIS_PASSWORD=$(kubectl get secret --namespace "default" wordpress-apache-redis -o jsonpath="{.data.redis-password}" | base64 --decode)
+## Helm Upgrade
+helm upgrade wordpress-apache gh-shesselink81-public/wordpress-apache --set ingress.hostname=$HOSTNAME --set wordpressPassword=$WORDPRESS_PASSWORD --set mariadb.auth.rootPassword=$MARIADB_ROOT_PASSWORD --set mariadb.auth.password=$MARIADB_PASSWORD --set redis.password=$REDIS_PASSWORD -f https://raw.githubusercontent.com/shesselink81/helm-charts/main/wordpress-apache/wp-test-values.yaml
+```
+## Get Passwords
+```console
+echo Wordpress Password: $(kubectl get secret --namespace default wordpress-apache -o jsonpath="{.data.wordpress-password}" | base64 --decode)
+echo Redis Password: $(kubectl get secret --namespace default wordpress-apache-redis -o jsonpath="{.data.redis-password}" | base64 --decode)
 
+```
 ## Introduction
 
 This chart bootstraps a [WordPress](https://github.com/bitnami/bitnami-docker-wordpress) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
