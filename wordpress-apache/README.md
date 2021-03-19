@@ -29,7 +29,10 @@ helm upgrade wordpress-apache gh-shesselink81-public/wordpress-apache --set ingr
 ```console
 echo Wordpress Password: $(kubectl get secret --namespace default wordpress-apache -o jsonpath="{.data.wordpress-password}" | base64 --decode)
 echo Redis Password: $(kubectl get secret --namespace default wordpress-apache-redis -o jsonpath="{.data.redis-password}" | base64 --decode)
-
+```
+## Get Current Helm Values
+```console
+helm get values wordpress-apache
 ```
 ## Introduction
 
