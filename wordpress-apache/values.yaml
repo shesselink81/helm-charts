@@ -603,6 +603,14 @@ metrics:
     ##
     additionalLabels: {}
 
+redis:
+  cluster:
+    enabled: false
+    slaveCount: 0
+  master:
+    persistence:
+      enabled: false  
+      
 ##
 ## MariaDB chart configuration
 ##

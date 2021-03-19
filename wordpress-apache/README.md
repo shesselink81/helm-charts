@@ -6,13 +6,13 @@
 ## Example Install 1
 ```console
 helm repo add gh-shesselink81-public https://shesselink81.github.io/helm-charts/public-charts/
-helm install wordpress-apache gh-shesselink81-public/wordpress-apache --set redis.cluster.enabled=false --set redis.cluster.slaveCount=0 --set redis.master.persistence.enabled=false
+helm install wordpress-apache gh-shesselink81-public/wordpress-apache
 ```
 ## Example Install 2, with cert-manager
 ```console
 helm repo add gh-shesselink81-public https://shesselink81.github.io/helm-charts/public-charts/
 HOSTNAME=test.example.com
-helm install wordpress-apache gh-shesselink81-public/wordpress-apache --set redis.cluster.enabled=false --set redis.cluster.slaveCount=0 --set redis.master.persistence.enabled=false --set wordpressScheme=https --set livenessProbe.httpGet.port=https --set livenessProbe.httpGet.scheme=HTTPS --set readinessProbe.httpGet.port=https --set readinessProbe.httpGet.scheme=HTTPS --set ingress.certManager=true --set ingress.hostname=$HOSTNAME --set ingress.tls=true -f https://raw.githubusercontent.com/shesselink81/helm-charts/main/wordpress-apache/wp-test-values.yaml
+helm install wordpress-apache gh-shesselink81-public/wordpress-apache --set ingress.hostname=$HOSTNAME -f https://raw.githubusercontent.com/shesselink81/helm-charts/main/wordpress-apache/wp-test-values.yaml
 ```
 
 ## Introduction
