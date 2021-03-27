@@ -12,24 +12,32 @@ helm install wordpress-apache gh-shesselink81-public/wordpress-apache
 ```console
 helm repo add gh-shesselink81-public https://shesselink81.github.io/helm-charts/public-charts/
 HOSTNAME=test.example.com
-helm install wordpress-apache gh-shesselink81-public/wordpress-apache --set ingress.hostname=$HOSTNAME -f https://raw.githubusercontent.com/shesselink81/helm-charts/main/wordpress-apache/wp-test-values.yaml
+NameSpace=default
+ReleaseName=wordpress-apache
+MetricsEnabled=true
+wordpressEmail=admin@example.com
+wordpressFirstName=Admin
+wordpressLastName=User
+helm install $ReleaseName gh-shesselink81-public/wordpress-apache --set metrics.enabled=$MetricsEnabled --set redis.metrics.enabled=$MetricsEnabled --set redis.metrics.serviceMonitor.enabled=$MetricsEnabled --set ingress.hostname=$HOSTNAME --set wordpressEmail=$wordpressEmail --set wordpressFirstName=$wordpressLastName --set wordpressFirstName=$wordpressLastName -f https://raw.githubusercontent.com/shesselink81/helm-charts/main/wordpress-apache/wp-test-values.yaml -n $NameSpace
 ```
 ## Upgrade Example
 ```console
 HOSTNAME=test.example.com
+NameSpace=default
+ReleaseName=wordpress-apache
+MetricsEnabled=true
+wordpressEmail=admin@example.com
+wordpressFirstName=Admin
+wordpressLastName=User
 ## Export Passwords
-export WORDPRESS_PASSWORD=$(kubectl get secret --namespace "default" wordpress-apache -o jsonpath="{.data.wordpress-password}" | base64 --decode)
-export MARIADB_ROOT_PASSWORD=$(kubectl get secret --namespace "default" wordpress-apache-mariadb -o jsonpath="{.data.mariadb-root-password}" | base64 --decode)
-export MARIADB_PASSWORD=$(kubectl get secret --namespace "default" wordpress-apache-mariadb -o jsonpath="{.data.mariadb-password}" | base64 --decode)
-export REDIS_PASSWORD=$(kubectl get secret --namespace "default" wordpress-apache-redis -o jsonpath="{.data.redis-password}" | base64 --decode)
+export WORDPRESS_PASSWORD=$(kubectl get secret --namespace $NameSpace $ReleaseName-wordpress-apache -o jsonpath="{.data.wordpress-password}" | base64 --decode)
+export MARIADB_ROOT_PASSWORD=$(kubectl get secret --namespace $NameSpace $ReleaseName-mariadb -o jsonpath="{.data.mariadb-root-password}" | base64 --decode)
+export MARIADB_PASSWORD=$(kubectl get secret --namespace $NameSpace $ReleaseName-mariadb -o jsonpath="{.data.mariadb-password}" | base64 --decode)
+export REDIS_PASSWORD=$(kubectl get secret --namespace $NameSpace $ReleaseName-redis -o jsonpath="{.data.redis-password}" | base64 --decode)
 ## Helm Upgrade
-helm upgrade wordpress-apache gh-shesselink81-public/wordpress-apache --set ingress.hostname=$HOSTNAME --set wordpressPassword=$WORDPRESS_PASSWORD --set mariadb.auth.rootPassword=$MARIADB_ROOT_PASSWORD --set mariadb.auth.password=$MARIADB_PASSWORD --set redis.password=$REDIS_PASSWORD -f https://raw.githubusercontent.com/shesselink81/helm-charts/main/wordpress-apache/wp-test-values.yaml
+helm upgrade $ReleaseName gh-shesselink81-public/wordpress-apache --set wordpressSkipInstall=true --set metrics.enabled=$MetricsEnabled --set redis.metrics.enabled=$MetricsEnabled --set redis.metrics.serviceMonitor.enabled=$MetricsEnabled --set ingress.hostname=$HOSTNAME --set wordpressPassword=$WORDPRESS_PASSWORD --set wordpressEmail=$wordpressEmail --set wordpressFirstName=$wordpressLastName --set wordpressFirstName=$wordpressLastName --set mariadb.auth.rootPassword=$MARIADB_ROOT_PASSWORD --set mariadb.auth.password=$MARIADB_PASSWORD --set redis.password=$REDIS_PASSWORD -f https://raw.githubusercontent.com/shesselink81/helm-charts/main/wordpress-apache/wp-test-values.yaml -n $NameSpace
 ```
-## Get Passwords
-```console
-echo Wordpress Password: $(kubectl get secret --namespace default wordpress-apache -o jsonpath="{.data.wordpress-password}" | base64 --decode)
-echo Redis Password: $(kubectl get secret --namespace default wordpress-apache-redis -o jsonpath="{.data.redis-password}" | base64 --decode)
-```
+
 ## Get Current Helm Values
 ```console
 helm get values wordpress-apache
