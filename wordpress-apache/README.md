@@ -2,13 +2,15 @@
 
 [WordPress](https://wordpress.org/) is one of the most versatile open source content management systems on the market. A publishing platform for building blogs and websites.
 
-
 ## Example Install 1
+
 ```console
 helm repo add gh-shesselink81-public https://shesselink81.github.io/helm-charts/public-charts/
 helm install wordpress-apache gh-shesselink81-public/wordpress-apache
 ```
+
 ## Example Install 2, with cert-manager
+
 ```console
 helm repo add gh-shesselink81-public https://shesselink81.github.io/helm-charts/public-charts/
 HOSTNAME=test.example.com
@@ -18,9 +20,11 @@ MetricsEnabled=true
 wordpressEmail=admin@example.com
 wordpressFirstName=Admin
 wordpressLastName=User
-helm install $ReleaseName gh-shesselink81-public/wordpress-apache --set metrics.enabled=$MetricsEnabled --set redis.metrics.enabled=$MetricsEnabled --set redis.metrics.serviceMonitor.enabled=$MetricsEnabled --set ingress.hostname=$HOSTNAME --set wordpressEmail=$wordpressEmail --set wordpressFirstName=$wordpressLastName --set wordpressFirstName=$wordpressLastName -f https://raw.githubusercontent.com/shesselink81/helm-charts/main/wordpress-apache/wp-test-values.yaml -n $NameSpace
+helm install $ReleaseName gh-shesselink81-public/wordpress-apache --set metrics.enabled=$MetricsEnabled --set redis.metrics.enabled=$MetricsEnabled --set redis.metrics.serviceMonitor.enabled=$MetricsEnabled --set ingress.hostname=$HOSTNAME --set wordpressEmail=$wordpressEmail --set wordpressFirstName=$wordpressLastName --set wordpressFirstName=$wordpressLastName -f https://raw.githubusercontent.com/shesselink81/helm-charts/main/wordpress-apache/wp-example-values.yaml -n $NameSpace
 ```
+
 ## Upgrade Example
+
 ```console
 HOSTNAME=test.example.com
 NameSpace=default
@@ -35,13 +39,15 @@ export MARIADB_ROOT_PASSWORD=$(kubectl get secret --namespace $NameSpace $Releas
 export MARIADB_PASSWORD=$(kubectl get secret --namespace $NameSpace $ReleaseName-mariadb -o jsonpath="{.data.mariadb-password}" | base64 --decode)
 export REDIS_PASSWORD=$(kubectl get secret --namespace $NameSpace $ReleaseName-redis -o jsonpath="{.data.redis-password}" | base64 --decode)
 ## Helm Upgrade
-helm upgrade $ReleaseName gh-shesselink81-public/wordpress-apache --set wordpressSkipInstall=true --set metrics.enabled=$MetricsEnabled --set redis.metrics.enabled=$MetricsEnabled --set redis.metrics.serviceMonitor.enabled=$MetricsEnabled --set ingress.hostname=$HOSTNAME --set wordpressPassword=$WORDPRESS_PASSWORD --set wordpressEmail=$wordpressEmail --set wordpressFirstName=$wordpressLastName --set wordpressFirstName=$wordpressLastName --set mariadb.auth.rootPassword=$MARIADB_ROOT_PASSWORD --set mariadb.auth.password=$MARIADB_PASSWORD --set redis.password=$REDIS_PASSWORD -f https://raw.githubusercontent.com/shesselink81/helm-charts/main/wordpress-apache/wp-test-values.yaml -n $NameSpace
+helm upgrade $ReleaseName gh-shesselink81-public/wordpress-apache --set wordpressSkipInstall=true --set metrics.enabled=$MetricsEnabled --set redis.metrics.enabled=$MetricsEnabled --set redis.metrics.serviceMonitor.enabled=$MetricsEnabled --set ingress.hostname=$HOSTNAME --set wordpressPassword=$WORDPRESS_PASSWORD --set wordpressEmail=$wordpressEmail --set wordpressFirstName=$wordpressLastName --set wordpressFirstName=$wordpressLastName --set mariadb.auth.rootPassword=$MARIADB_ROOT_PASSWORD --set mariadb.auth.password=$MARIADB_PASSWORD --set redis.password=$REDIS_PASSWORD -f https://raw.githubusercontent.com/shesselink81/helm-charts/main/wordpress-apache/wp-example-values.yaml -n $NameSpace
 ```
 
 ## Get Current Helm Values
+
 ```console
 helm get values $ReleaseName -n $NameSpace
 ```
+
 ## Introduction
 
 This chart bootstraps a [WordPress](https://github.com/bitnami/bitnami-docker-wordpress) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
@@ -564,22 +570,22 @@ Find more information about how to deal with common errors related to Bitnami’
 Obtain the credentials and the name of the PVC used to hold the MariaDB data on your current release:
 
 ```console
-$ export WORDPRESS_PASSWORD=$(kubectl get secret --namespace default wordpress -o jsonpath="{.data.wordpress-password}" | base64 --decode)
-$ export MARIADB_ROOT_PASSWORD=$(kubectl get secret --namespace default wordpress-mariadb -o jsonpath="{.data.mariadb-root-password}" | base64 --decode)
-$ export MARIADB_PASSWORD=$(kubectl get secret --namespace default wordpress-mariadb -o jsonpath="{.data.mariadb-password}" | base64 --decode)
-$ export MARIADB_PVC=$(kubectl get pvc -l app.kubernetes.io/instance=wordpress,app.kubernetes.io/name=mariadb,app.kubernetes.io/component=primary -o jsonpath="{.items[0].metadata.name}")
+export WORDPRESS_PASSWORD=$(kubectl get secret --namespace default wordpress -o jsonpath="{.data.wordpress-password}" | base64 --decode)
+export MARIADB_ROOT_PASSWORD=$(kubectl get secret --namespace default wordpress-mariadb -o jsonpath="{.data.mariadb-root-password}" | base64 --decode)
+export MARIADB_PASSWORD=$(kubectl get secret --namespace default wordpress-mariadb -o jsonpath="{.data.mariadb-password}" | base64 --decode)
+export MARIADB_PVC=$(kubectl get pvc -l app.kubernetes.io/instance=wordpress,app.kubernetes.io/name=mariadb,app.kubernetes.io/component=primary -o jsonpath="{.items[0].metadata.name}")
 ```
 
 Upgrade your release (maintaining the version) disabling MariaDB and scaling WordPress replicas to 0:
 
 ```console
-$ helm upgrade wordpress bitnami/wordpress --set wordpressPassword=$WORDPRESS_PASSWORD --set replicaCount=0 --set mariadb.enabled=false --version 9.6.4
+helm upgrade wordpress bitnami/wordpress --set wordpressPassword=$WORDPRESS_PASSWORD --set replicaCount=0 --set mariadb.enabled=false --version 9.6.4
 ```
 
 Finally, upgrade you release to `10.0.0` reusing the existing PVC, and enabling back MariaDB:
 
 ```console
-$ helm upgrade wordpress bitnami/wordpress --set mariadb.primary.persistence.existingClaim=$MARIADB_PVC --set mariadb.auth.rootPassword=$MARIADB_ROOT_PASSWORD --set mariadb.auth.password=$MARIADB_PASSWORD --set wordpressPassword=$WORDPRESS_PASSWORD
+helm upgrade wordpress bitnami/wordpress --set mariadb.primary.persistence.existingClaim=$MARIADB_PVC --set mariadb.auth.rootPassword=$MARIADB_ROOT_PASSWORD --set mariadb.auth.password=$MARIADB_PASSWORD --set wordpressPassword=$WORDPRESS_PASSWORD
 ```
 
 You should see the lines below in MariaDB container logs:
