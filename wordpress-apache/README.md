@@ -40,7 +40,7 @@ helm upgrade $ReleaseName gh-shesselink81-public/wordpress-apache --set wordpres
 
 ## Get Current Helm Values
 ```console
-helm get values wordpress-apache
+helm get values $ReleaseName -n $NameSpace
 ```
 ## Introduction
 
