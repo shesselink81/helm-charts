@@ -5,7 +5,43 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.7.0
-    created: "2021-03-27T23:07:15.2869188+01:00"
+    created: "2021-04-05T04:00:05.3566865+02:00"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    - name: redis
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-redis
+      version: 12.x.x
+    description: Web publishing platform for building blogs and websites.
+    digest: 4186f5848a921156af46ca716451b36f669bbdbae7ec2a86aa4982ae8b1bc1ae
+    home: https://artifacthub.io/packages/helm/gh-shesselink81-public/wordpress-apache
+    icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: wordpress-apache
+    sources:
+    - https://github.com/shesselink81/helm-charts/tree/main/wordpress-apache
+    - https://github.com/shesselink81/wordpress-apache
+    - http://www.wordpress.com/
+    type: application
+    urls:
+    - wordpress-apache-1.0.14.tgz
+    version: 1.0.14
+  - annotations:
+      category: CMS
+    apiVersion: v2
+    appVersion: 5.7.0
+    created: "2021-04-05T04:00:05.3271175+02:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -41,7 +77,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.7.0
-    created: "2021-03-27T23:07:15.262961+01:00"
+    created: "2021-04-05T04:00:05.2758724+02:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -72,7 +108,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.7.0
-    created: "2021-03-27T23:07:15.2401791+01:00"
+    created: "2021-04-05T04:00:05.2246636+02:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -103,7 +139,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.7.0
-    created: "2021-03-27T23:07:15.2164645+01:00"
+    created: "2021-04-05T04:00:05.1748458+02:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -134,7 +170,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.7.0
-    created: "2021-03-27T23:07:15.3122056+01:00"
+    created: "2021-04-05T04:00:05.4111658+02:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -161,4 +197,4 @@ entries:
     urls:
     - wordpress-apache-1.0.9.tgz
     version: 1.0.9
-generated: "2021-03-27T23:07:15.1944443+01:00"
+generated: "2021-04-05T04:00:05.1263529+02:00"
