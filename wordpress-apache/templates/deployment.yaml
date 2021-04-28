@@ -91,6 +91,8 @@ spec:
         {{- end }}
       {{- end }}
       containers:
+        - name: nr-daemon
+          image: newrelic/php-daemon
         - name: wordpress
           image: {{ template "wordpress.image" . }}
           imagePullPolicy: {{ .Values.image.pullPolicy | quote }}

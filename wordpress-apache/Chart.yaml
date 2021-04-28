@@ -27,7 +27,7 @@ sources:
   - https://github.com/shesselink81/wordpress-apache
   - http://www.wordpress.com/
 icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
-version: 1.0.15
+version: 1.0.16
 maintainers:
   - email: sander@hesselink.me
     name: shesselink81
