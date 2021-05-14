@@ -4,8 +4,44 @@ entries:
   - annotations:
       category: CMS
     apiVersion: v2
+    appVersion: 5.7.2
+    created: "2021-05-14T23:20:16.1044799+02:00"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    - name: redis
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-redis
+      version: 12.x.x
+    description: Web publishing platform for building blogs and websites.
+    digest: 1c9fd90fc8193c4b8b477b636c91ed9d159d628ab7e0a117b0ee9634b10cbdcd
+    home: https://artifacthub.io/packages/helm/gh-shesselink81-public/wordpress-apache
+    icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: wordpress-apache
+    sources:
+    - https://github.com/shesselink81/helm-charts/tree/main/wordpress-apache
+    - https://github.com/shesselink81/wordpress-apache
+    - http://www.wordpress.com/
+    type: application
+    urls:
+    - wordpress-apache-1.0.21.tgz
+    version: 1.0.21
+  - annotations:
+      category: CMS
+    apiVersion: v2
     appVersion: 5.7.0
-    created: "2021-05-14T05:25:42.6378063+02:00"
+    created: "2021-05-14T23:20:16.0904778+02:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -41,7 +77,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.7.0
-    created: "2021-05-14T05:25:42.626804+02:00"
+    created: "2021-05-14T23:20:16.0624803+02:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -77,7 +113,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.7.0
-    created: "2021-05-14T05:25:42.6138046+02:00"
+    created: "2021-05-14T23:20:16.0314804+02:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -113,7 +149,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.7.0
-    created: "2021-05-14T05:25:42.5998041+02:00"
+    created: "2021-05-14T23:20:16.0064323+02:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -149,7 +185,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.7.0
-    created: "2021-05-14T05:25:42.5858049+02:00"
+    created: "2021-05-14T23:20:15.9804344+02:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -185,7 +221,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.7.0
-    created: "2021-05-14T05:25:42.5738051+02:00"
+    created: "2021-05-14T23:20:15.9292256+02:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -221,7 +257,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.7.0
-    created: "2021-05-14T05:25:42.5598021+02:00"
+    created: "2021-05-14T23:20:15.9060422+02:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -252,7 +288,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.7.0
-    created: "2021-05-14T05:25:42.5468042+02:00"
+    created: "2021-05-14T23:20:15.8814726+02:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -283,7 +319,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.7.0
-    created: "2021-05-14T05:25:42.5318045+02:00"
+    created: "2021-05-14T23:20:15.8569211+02:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -314,7 +350,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 5.7.0
-    created: "2021-05-14T05:25:42.6508003+02:00"
+    created: "2021-05-14T23:20:16.1304805+02:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -341,4 +377,4 @@ entries:
     urls:
     - wordpress-apache-1.0.9.tgz
     version: 1.0.9
-generated: "2021-05-14T05:25:42.4458041+02:00"
+generated: "2021-05-14T23:20:15.7859311+02:00"

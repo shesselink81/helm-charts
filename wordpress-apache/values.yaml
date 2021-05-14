@@ -14,7 +14,7 @@ global:
 image:
   registry: quay.io
   repository: shesselink81/wordpress-apache
-  tag: v5.7.1.0
+  tag: v5.7.2.0
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
   ## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images
@@ -107,7 +107,7 @@ wordpressTablePrefix: wp_
 ## Scheme to generate application URLs
 ## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
 ##
-wordpressScheme: http
+wordpressScheme: https
 
 ## Skip wizard installation (only if you use an external database that already contains WordPress data)
 ## ref: https://github.com/bitnami/bitnami-docker-wordpress#connect-wordpress-docker-container-to-an-existing-database
