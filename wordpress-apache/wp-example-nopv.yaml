@@ -1,0 +1,9 @@
+persistence:
+  enabled: false
+metrics:
+  serviceMonitor:
+    enabled: false
+mariadb:
+  primary:
+    persistence:
+      enabled: false
