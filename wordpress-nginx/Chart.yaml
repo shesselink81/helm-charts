@@ -20,13 +20,12 @@ description: Web publishing platform for building blogs and websites.
 engine: gotpl
 name: wordpress-nginx
 type: application
-home: https://artifacthub.io/packages/helm/gh-shesselink81-public/wordpress-nginx
+home: https://artifacthub.io/packages/helm/helm-charts-home/wordpress-nginx
 sources:
   - https://github.com/shesselink81/wordpress-nginx
-  - https://shesselink81.github.io/helm-charts/public-charts/
   - http://www.wordpress.com/
 icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
-version: 4.0.4
+version: 4.0.6
 maintainers:
   - email: sander@hesselink.me
     name: shesselink81

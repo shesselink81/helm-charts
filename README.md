@@ -3,7 +3,5 @@
 Public Helm Charts repo shesselink81:
 
 ```console
-helm repo add gh-shesselink81-public https://shesselink81.github.io/helm-charts/public-charts/
+helm repo add shesselink81-home-public https://repo.hessel.cloud/repository/helm/
 ```
-
-

@@ -5,8 +5,8 @@
 ## Example Install 1
 
 ```console
-helm repo add gh-shesselink81-public https://shesselink81.github.io/helm-charts/public-charts/
-helm install wordpress-nginx gh-shesselink81-public/wordpress-nginx
+helm repo add shesselink81-home-public https://repo.hessel.cloud/repository/helm/
+helm install wordpress-nginx shesselink81-home-public/wordpress-nginx
 ```
 
 ## Upgrade Example
@@ -21,7 +21,7 @@ export WORDPRESS_PASSWORD=$(kubectl get secret --namespace $NameSpace $ReleaseNa
 export MARIADB_ROOT_PASSWORD=$(kubectl get secret --namespace $NameSpace $ReleaseName-mariadb -o jsonpath="{.data.mariadb-root-password}" | base64 --decode)
 export MARIADB_PASSWORD=$(kubectl get secret --namespace $NameSpace $ReleaseName-mariadb -o jsonpath="{.data.mariadb-password}" | base64 --decode)
 ## Helm Upgrade
-helm upgrade $ReleaseName gh-shesselink81-public/wordpress-nginx --set wordpressSkipInstall=true --set metrics.enabled=$MetricsEnabled --set ingress.hostname=$HOSTNAME --set wordpressPassword=$WORDPRESS_PASSWORD --set mariadb.auth.rootPassword=$MARIADB_ROOT_PASSWORD --set mariadb.auth.password=$MARIADB_PASSWORD -n $NameSpace
+helm upgrade $ReleaseName shesselink81-home-public/wordpress-nginx --set wordpressSkipInstall=true --set metrics.enabled=$MetricsEnabled --set ingress.hostname=$HOSTNAME --set wordpressPassword=$WORDPRESS_PASSWORD --set mariadb.auth.rootPassword=$MARIADB_ROOT_PASSWORD --set mariadb.auth.password=$MARIADB_PASSWORD -n $NameSpace
 ```
 
 ## Get Current Helm Values
