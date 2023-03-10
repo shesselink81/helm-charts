@@ -3,7 +3,7 @@ entries:
   nexus-repository-manager:
   - apiVersion: v2
     appVersion: 3.44.0
-    created: "2023-03-10T23:56:01.0950499+01:00"
+    created: "2023-03-11T00:28:39.2030602+01:00"
     description: Sonatype Nexus Repository Manager - Universal Binary repository
     digest: 2adc575d92d4711a7ffaf56290b85666fc5d6c9336e20e3037b3b745c719b370
     home: https://www.sonatype.com/nexus-repository-oss
@@ -34,7 +34,42 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 6.1.1
-    created: "2023-03-10T23:56:01.1152509+01:00"
+    created: "2023-03-11T00:28:39.2537055+01:00"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - condition: memcached.enabled
+      name: memcached
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.x.x
+    description: Web publishing platform for building blogs and websites.
+    digest: fb89914d971e59140e1725acf7be628fbd476f0607aabbe54f93ebca0f3535a8
+    home: https://artifacthub.io/packages/helm/gh-shesselink81-public/wordpress-apache
+    icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: wordpress-apache
+    sources:
+    - https://github.com/shesselink81/helm-charts/tree/main/wordpress-apache
+    - https://github.com/shesselink81/wordpress-apache
+    - http://www.wordpress.com/
+    type: application
+    urls:
+    - wordpress-apache-2.1.12.tgz
+    version: 2.1.12
+  - annotations:
+      category: CMS
+    apiVersion: v2
+    appVersion: 6.1.1
+    created: "2023-03-11T00:28:39.2381356+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -69,7 +104,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 6.1.1
-    created: "2023-03-10T23:56:01.1052359+01:00"
+    created: "2023-03-11T00:28:39.2220618+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -104,7 +139,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 6.1.1
-    created: "2023-03-10T23:56:01.1542186+01:00"
+    created: "2023-03-11T00:28:39.3012585+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -139,7 +174,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 6.1.1
-    created: "2023-03-10T23:56:01.1442208+01:00"
+    created: "2023-03-11T00:28:39.2852044+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -176,7 +211,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 6.1.1
-    created: "2023-03-10T23:56:01.1895525+01:00"
+    created: "2023-03-11T00:28:39.3666116+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -210,7 +245,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 6.1.1
-    created: "2023-03-10T23:56:01.179449+01:00"
+    created: "2023-03-11T00:28:39.3347705+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -244,7 +279,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 6.1.1
-    created: "2023-03-10T23:56:01.1682189+01:00"
+    created: "2023-03-11T00:28:39.317047+01:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -275,4 +310,4 @@ entries:
     urls:
     - wordpress-nginx-4.0.4.tgz
     version: 4.0.4
-generated: "2023-03-10T23:56:01.0859421+01:00"
+generated: "2023-03-11T00:28:39.192798+01:00"
