@@ -1,7 +1,7 @@
 annotations:
   category: CMS
 apiVersion: v2
-appVersion: 6.2.0
+appVersion: 6.2.2
 dependencies:
   - condition: mariadb.enabled
     name: mariadb
@@ -25,7 +25,7 @@ sources:
   - https://github.com/shesselink81/wordpress-nginx
   - http://www.wordpress.com/
 icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
-version: 5.0.1
+version: 5.0.2
 maintainers:
   - email: sander@hesselink.me
     name: shesselink81
