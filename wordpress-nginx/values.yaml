@@ -183,22 +183,12 @@ customPostInitScripts:
    enable-plugins.sh: |
         #!/bin/bash
         chmod +w /bitnami/wordpress/wp-config.php
-        wp plugin install /updraftplus.zip --activate
-        cd /opt/bitnami/wordpress/wp-content
-        wget https://fc5c72090cae04877ba1d5c.blob.core.windows.net/downloads/plugins.tar.gz
-        tar -zxvf plugins.tar.gz
-        wp plugin delete simple-tags
-        wp plugin delete all-in-one-seo-pack
         wp plugin delete amazon-polly
         wp plugin delete google-analytics-for-wordpress
-        wp plugin delete wp-mail-smtp
         wp plugin delete amp
-        wp theme delete twentytwenty
-        wp theme delete twentytwentyone
         wp theme delete twentytwentytwo        
         wp plugin auto-updates enable --all
         wp plugin activate --all
-        wp plugin update --all
         chmod -w /bitnami/wordpress/wp-config.php
 ## SMTP mail delivery configuration
 ## ref: https://github.com/bitnami/bitnami-docker-wordpress/#smtp-configuration

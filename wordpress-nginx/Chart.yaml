@@ -17,7 +17,6 @@ dependencies:
     repository: https://charts.bitnami.com/bitnami
     version: 6.x.x
 description: Web publishing platform for building blogs and websites.
-engine: gotpl
 name: wordpress-nginx
 type: application
 home: https://artifacthub.io/packages/helm/helm-charts-home/wordpress-nginx
@@ -25,7 +24,7 @@ sources:
   - https://github.com/shesselink81/wordpress-nginx
   - http://www.wordpress.com/
 icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
-version: 5.0.2
+version: 5.0.3
 maintainers:
   - email: sander@hesselink.me
     name: shesselink81
