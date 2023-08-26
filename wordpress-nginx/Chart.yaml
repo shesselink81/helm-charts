@@ -24,7 +24,7 @@ sources:
   - https://github.com/shesselink81/wordpress-nginx
   - http://www.wordpress.com/
 icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
-version: 5.0.4
+version: 6.3.0
 maintainers:
   - email: sander@hesselink.me
     name: shesselink81
