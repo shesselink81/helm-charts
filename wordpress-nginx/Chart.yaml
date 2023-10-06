@@ -1,12 +1,12 @@
 annotations:
   category: CMS
 apiVersion: v2
-appVersion: 6.3.0
+appVersion: 6.3.1
 dependencies:
   - condition: mariadb.enabled
     name: mariadb
     repository: https://charts.bitnami.com/bitnami
-    version: 11.x.x
+    version: 13.x.x
   - name: common
     repository: https://charts.bitnami.com/bitnami
     tags:
@@ -24,7 +24,7 @@ sources:
   - https://github.com/shesselink81/wordpress-nginx
   - http://www.wordpress.com/
 icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
-version: 6.3.0
+version: 6.3.1
 maintainers:
   - email: sander@hesselink.me
     name: shesselink81

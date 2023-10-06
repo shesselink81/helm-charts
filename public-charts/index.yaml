@@ -3,7 +3,7 @@ entries:
   nexus-repository-manager:
   - apiVersion: v2
     appVersion: 3.44.0
-    created: "2023-08-26T06:27:50.2204664+02:00"
+    created: "2023-10-06T16:52:45.8706291+02:00"
     description: Sonatype Nexus Repository Manager - Universal Binary repository
     digest: 2adc575d92d4711a7ffaf56290b85666fc5d6c9336e20e3037b3b745c719b370
     home: https://www.sonatype.com/nexus-repository-oss
@@ -34,7 +34,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 6.1.1
-    created: "2023-08-26T06:27:50.241622+02:00"
+    created: "2023-10-06T16:52:45.893862+02:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -69,8 +69,42 @@ entries:
   - annotations:
       category: CMS
     apiVersion: v2
+    appVersion: 6.3.1
+    created: "2023-10-06T16:52:45.9336854+02:00"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - condition: memcached.enabled
+      name: memcached
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.x.x
+    description: Web publishing platform for building blogs and websites.
+    digest: c5db82378d509e1bd0a832ea9f75ad6dbb98d32c1083dcd57be5debb40c3dd06
+    home: https://artifacthub.io/packages/helm/helm-charts-home/wordpress-nginx
+    icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+    maintainers:
+    - email: sander@hesselink.me
+      name: shesselink81
+    name: wordpress-nginx
+    sources:
+    - https://github.com/shesselink81/wordpress-nginx
+    - http://www.wordpress.com/
+    type: application
+    urls:
+    - wordpress-nginx-6.3.1.tgz
+    version: 6.3.1
+  - annotations:
+      category: CMS
+    apiVersion: v2
     appVersion: 6.3.0
-    created: "2023-08-26T06:27:50.2802807+02:00"
+    created: "2023-10-06T16:52:45.9236056+02:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -104,7 +138,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: 6.3.0
-    created: "2023-08-26T06:27:50.2680537+02:00"
+    created: "2023-10-06T16:52:45.9077241+02:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -134,4 +168,4 @@ entries:
     urls:
     - wordpress-nginx-5.0.4.tgz
     version: 5.0.4
-generated: "2023-08-26T06:27:50.210734+02:00"
+generated: "2023-10-06T16:52:45.8580309+02:00"
